@@ -1,4 +1,4 @@
-# EE205-Lab
+# EE250-Lab
 
 ## Team Members
 
