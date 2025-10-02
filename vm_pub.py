@@ -16,8 +16,11 @@ if __name__ == '__main__':
     #get IP address
     ip_address=0 
     """your code here"""
+    hostname = socket.gethostname()
+    ip_address = socket.gethostbyname(hostname)
     #create a client object
     client = mqtt.Client()
+    
     
     #attach the on_connect() callback function defined above to the mqtt client
     client.on_connect = on_connect
@@ -45,5 +48,17 @@ if __name__ == '__main__':
 
         #get date and time 
         """your code here"""
+        now_t = datetime.now()
+        date = now_t.strftime("%Y-%m-%d")
+        curr_time = now_t.strftime("%H:%M:%S")
         #publish date and time in their own topics
         """your code here"""
+        dateTopic = "maykhan/date"
+        client.publish(dateTopic, date)
+    
+        timeTopic = "maykhan/time"
+        client.publish(timeTopic, curr_time)
+
+        print(f"Date: {date}")
+        print(f"Time: {curr_time}")
+        
