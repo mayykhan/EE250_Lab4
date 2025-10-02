@@ -1,5 +1,6 @@
 #EE205-Lab
-# EE250-Lab
-# EE250-Lab
-# EE250-Lab
-# EE250-Lab
+
+## Team Members
+
+- Shreya Nair github.com/shreyanair614
+- May Khan github.com/mayykhan
